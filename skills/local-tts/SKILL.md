@@ -1,6 +1,9 @@
 ---
 name: local-tts
 description: Generate speech from text locally using VoxCPM2 (Apache-2.0, 30 languages, voice design, voice cloning). Use when the user asks to "say" or "speak" something, wants a voiceover or narration, wants to clone a voice, or wants to generate audio from text. Free, runs locally, no API calls. Output is a 48 kHz wav file.
+version: 1.0.0
+author: Bubble Invest
+license: Apache-2.0
 user-invocable: true
 allowed-tools:
   - Bash
