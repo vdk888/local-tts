@@ -1,0 +1,121 @@
+# Local TTS — Claude Code Plugin
+
+Free, offline text-to-speech for Claude Code. Powered by [VoxCPM2](https://github.com/OpenBMB/VoxCPM) (2B params, Apache-2.0).
+
+**30 languages. Voice design. Voice cloning. Zero API calls. Zero cost.**
+
+## Features
+
+| Feature | Description |
+|---------|-------------|
+| **Text-to-Speech** | Convert any text to natural speech in 30 languages |
+| **Voice Design** | Describe a voice in natural language and generate it — no samples needed |
+| **Voice Cloning** | Clone any voice from a 3-10 second reference clip |
+| **Offline** | Runs 100% locally on your machine. No API keys, no cloud, no cost |
+| **Apple Silicon** | Optimized for Metal (MPS) on M-series Macs |
+
+## Installation
+
+### As a Claude Code Plugin (recommended)
+
+```bash
+# Add the marketplace
+/plugin marketplace add vdk888/local-tts
+
+# Install the plugin
+/plugin install local-tts@local-tts-marketplace
+```
+
+### Setup
+
+On first use, run the setup to create the Python environment:
+
+```
+/local-tts:local-tts
+```
+
+Claude will automatically run the setup script if the environment isn't configured yet. Or run it manually:
+
+```bash
+bash ~/.claude/plugins/cache/local-tts-marketplace/local-tts/1.0.0/scripts/setup.sh
+```
+
+**Requirements:**
+- Python 3.10+ 
+- macOS with Apple Silicon (recommended) or Linux with CUDA
+- ~10 GB disk space for model weights (downloaded on first use)
+
+## Usage
+
+Once installed, just ask Claude naturally:
+
+- *"Say hello in French"*
+- *"Read this paragraph out loud"*
+- *"Clone my voice from this file and say..."*
+- *"Generate a voiceover with a warm female voice"*
+
+Or invoke the skill directly:
+
+```
+/local-tts:local-tts
+```
+
+### Voice Design
+
+Describe any voice — no reference audio needed:
+
+> "Say 'Welcome to our podcast' with a warm, calm female voice, mid-30s, American accent"
+
+> "Generate a voiceover with an older British man, deep voice, slow and authoritative"
+
+### Voice Cloning
+
+Provide a short audio clip (3-10 seconds) and clone the voice:
+
+> "Clone the voice in ~/voice-sample.mp3 and say 'This is a test'"
+
+You can combine cloning with style guidance:
+
+> "Clone ~/sample.mp3 but make it sound more enthusiastic and happy"
+
+## Supported Languages
+
+Arabic, Burmese, Chinese (+ dialects), Danish, Dutch, English, Finnish, French, German, Greek, Hebrew, Hindi, Indonesian, Italian, Japanese, Khmer, Korean, Lao, Malay, Norwegian, Polish, Portuguese, Russian, Spanish, Swahili, Swedish, Tagalog, Thai, Turkish, Vietnamese.
+
+No language configuration needed — just write your text in any supported language.
+
+## Performance
+
+| Metric | Value |
+|--------|-------|
+| Model load | ~25s (cached weights) |
+| Generation speed | RTF ~2.3x (10s audio in ~23s) |
+| First-time setup | ~2 min (venv) + ~5 min (model download) |
+| Model size | ~10 GB |
+| Output format | 48 kHz WAV |
+
+## How It Works
+
+This plugin wraps [VoxCPM2](https://github.com/OpenBMB/VoxCPM) by OpenBMB — a 2-billion parameter text-to-speech model supporting 30 languages with voice design and cloning capabilities. The model runs locally via PyTorch on Apple Silicon (Metal/MPS) or CUDA GPUs.
+
+## Configuration
+
+Environment variables for customization:
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `LOCAL_TTS_VENV` | `~/.local-tts/venv` | Python venv location |
+| `LOCAL_TTS_PYTHON` | `python3` | Python binary for venv creation |
+
+## License
+
+Apache-2.0 — free for personal and commercial use.
+
+## Credits
+
+- **VoxCPM2** by [OpenBMB](https://github.com/OpenBMB/VoxCPM) — the TTS model
+- **Bubble Invest** — plugin packaging and distribution
+
+---
+
+Built by [Bubble Invest](https://bubbleinvest.com) with Claude Code.
