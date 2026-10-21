@@ -134,4 +134,4 @@ Apache-2.0 — free for personal and commercial use.
 
 ---
 
-Built by [Bubble Invest](https://bubbleinvest.com) with Claude Code.
+Built by [Bubble Invest](https://bubbleinvest.org) with Claude Code.
