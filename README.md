@@ -14,7 +14,7 @@ https://github.com/vdk888/local-tts/raw/main/demo.mp4
 |---------|-------------|
 | **Text-to-Speech** | Convert any text to natural speech in 30 languages |
 | **Voice Design** | Describe a voice in natural language and generate it — no samples needed |
-| **Voice Cloning** | Clone any voice from a 3-10 second reference clip |
+| **Voice Cloning** | Clone your own voice, or that of someone who consents, from a 3-10 second reference clip |
 | **Offline** | Runs 100% locally on your machine. No API keys, no cloud, no cost |
 | **Apple Silicon** | Optimized for Metal (MPS) on M-series Macs |
 
@@ -73,6 +73,8 @@ Describe any voice — no reference audio needed:
 > "Generate a voiceover with an older British man, deep voice, slow and authoritative"
 
 ### Voice Cloning
+
+Clone only your own voice, or that of someone who consents.
 
 Provide a short audio clip (3-10 seconds) and clone the voice:
 
