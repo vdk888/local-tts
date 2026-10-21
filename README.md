@@ -22,6 +22,15 @@ https://github.com/vdk888/local-tts/raw/main/demo.mp4
 
 ### As a Claude Code Plugin (recommended)
 
+From the [Bubble Invest catalogue](https://github.com/vdk888/bubble-skills):
+
+```bash
+/plugin marketplace add vdk888/bubble-skills
+/plugin install local-tts@bubble-skills
+```
+
+Or from this repository:
+
 ```bash
 # Add the marketplace
 /plugin marketplace add vdk888/local-tts
@@ -32,16 +41,17 @@ https://github.com/vdk888/local-tts/raw/main/demo.mp4
 
 ### Setup
 
-On first use, run the setup to create the Python environment:
+On first use, run the setup to create the Python environment. This works whichever way you installed the plugin:
 
 ```
 /local-tts:local-tts
 ```
 
-Claude will automatically run the setup script if the environment isn't configured yet. Or run it manually:
+Claude will automatically run the setup script if the environment isn't configured yet. Or run it manually, from a clone of this repository:
 
 ```bash
-bash ~/.claude/plugins/cache/local-tts-marketplace/local-tts/1.0.0/scripts/setup.sh
+git clone https://github.com/vdk888/local-tts
+bash local-tts/scripts/setup.sh
 ```
 
 **Requirements:**
