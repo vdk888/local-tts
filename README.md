@@ -2,7 +2,7 @@
 
 Free, offline text-to-speech for Claude Code. Powered by [VoxCPM2](https://github.com/OpenBMB/VoxCPM) (2B params, Apache-2.0).
 
-**30 languages. Voice design. Voice cloning. Zero API calls. Zero cost.**
+**30 languages. Voice design. Cloning your own voice, or that of someone who consents. Zero API calls. Zero cost.**
 
 https://github.com/vdk888/local-tts/raw/main/demo.mp4
 
