@@ -2,7 +2,7 @@
 
 Free, offline text-to-speech for Claude Code. Powered by [VoxCPM2](https://github.com/OpenBMB/VoxCPM) (2B params, Apache-2.0).
 
-**30 languages. Voice design. Voice cloning. Zero API calls. Zero cost.**
+**30 languages. Voice design. Cloning your own voice, or that of someone who consents. Zero API calls. Zero cost.**
 
 https://github.com/vdk888/local-tts/raw/main/demo.mp4
 
@@ -14,13 +14,22 @@ https://github.com/vdk888/local-tts/raw/main/demo.mp4
 |---------|-------------|
 | **Text-to-Speech** | Convert any text to natural speech in 30 languages |
 | **Voice Design** | Describe a voice in natural language and generate it — no samples needed |
-| **Voice Cloning** | Clone any voice from a 3-10 second reference clip |
+| **Voice Cloning** | Clone your own voice, or that of someone who consents, from a 3-10 second reference clip |
 | **Offline** | Runs 100% locally on your machine. No API keys, no cloud, no cost |
 | **Apple Silicon** | Optimized for Metal (MPS) on M-series Macs |
 
 ## Installation
 
 ### As a Claude Code Plugin (recommended)
+
+From the [Bubble Invest catalogue](https://github.com/vdk888/bubble-skills):
+
+```bash
+/plugin marketplace add vdk888/bubble-skills
+/plugin install local-tts@bubble-skills
+```
+
+Or from this repository:
 
 ```bash
 # Add the marketplace
@@ -32,16 +41,17 @@ https://github.com/vdk888/local-tts/raw/main/demo.mp4
 
 ### Setup
 
-On first use, run the setup to create the Python environment:
+On first use, run the setup to create the Python environment. This works whichever way you installed the plugin:
 
 ```
 /local-tts:local-tts
 ```
 
-Claude will automatically run the setup script if the environment isn't configured yet. Or run it manually:
+Claude will automatically run the setup script if the environment isn't configured yet. Or run it manually, from a clone of this repository:
 
 ```bash
-bash ~/.claude/plugins/cache/local-tts-marketplace/local-tts/1.0.0/scripts/setup.sh
+git clone https://github.com/vdk888/local-tts
+bash local-tts/scripts/setup.sh
 ```
 
 **Requirements:**
@@ -73,6 +83,8 @@ Describe any voice — no reference audio needed:
 > "Generate a voiceover with an older British man, deep voice, slow and authoritative"
 
 ### Voice Cloning
+
+Clone only your own voice, or that of someone who consents.
 
 Provide a short audio clip (3-10 seconds) and clone the voice:
 
@@ -122,4 +134,4 @@ Apache-2.0 — free for personal and commercial use.
 
 ---
 
-Built by [Bubble Invest](https://bubbleinvest.com) with Claude Code.
+Built by [Bubble Invest](https://bubbleinvest.org) with Claude Code.
